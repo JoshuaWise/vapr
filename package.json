@@ -1,0 +1,41 @@
+{
+  "name": "wingit",
+  "version": "0.1.0",
+  "description": "An unopinionated web server for people who don't give a shit",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "parse-http-url": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "(npm bin)/mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaWise/wingit.git"
+  },
+  "keywords": [
+    "framework",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api",
+    "server",
+    "http",
+    "https",
+    "promise",
+    "stream",
+    "observables"
+  ],
+  "author": "Joshua Wise <joshuathomaswise@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshuaWise/wingit/issues"
+  },
+  "homepage": "https://github.com/JoshuaWise/wingit#readme"
+}
