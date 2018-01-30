@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "parse-http-url": "^0.3.0"
+    "parse-http-url": "^0.3.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
