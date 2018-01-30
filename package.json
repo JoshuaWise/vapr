@@ -7,9 +7,12 @@
     "lib": "lib"
   },
   "dependencies": {
-    "parse-http-url": "^0.2.1"
+    "parse-http-url": "^0.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  },
   "scripts": {
     "test": "(npm bin)/mocha --exit"
   },
