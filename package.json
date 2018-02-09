@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "An unopinionated web server for people who don't give a shit",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {
     "parse-http-url": "^0.3.1",
     "wise-promise": "^1.1.1",
