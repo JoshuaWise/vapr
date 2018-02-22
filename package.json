@@ -39,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/JoshuaWise/wingit/issues"
   },
-  "homepage": "https://github.com/JoshuaWise/wingit#readme"
+  "homepage": "https://github.com/JoshuaWise/wingit#readme",
+  "optionalDependencies": {
+    "wise-inspection": "^1.0.1"
+  }
 }
