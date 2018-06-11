@@ -7,9 +7,20 @@
 - write readme
 - publish
 
-NOTES:
+NOTE:
 Ideally, when 'expect: 100-continue' is sent, the request.body() method will
 emit res.writeContinue(), as long as it doesn't throw. Unforunately, this is
 handled by http.Server, not the request handler. If a module is created to wrap
 around http.Server, is should also handle 'upgrade' events, and the methods that
 are expected of http.Server.
+
+NOTE:
+During any 'before' or 'after' route handler, the request could actually be
+aborted. It's safe to continue processing the request as if it weren't, and the
+response will simply be discarded when it would normally be sent to the client.
+Also, a river response body is subject to possible cancellation at any time, if
+the client aborts the request.
+
+NOTE:
+Any time a Response object is used in an 'after' middleware, it could be a
+400-599 error response, which might not be obvious when writing the middleware.
