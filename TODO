@@ -1,3 +1,4 @@
+- move plugins to other projects
 - support request and response bodies of various types
 - finish all in-code TODOs
 - finalize wise-river
