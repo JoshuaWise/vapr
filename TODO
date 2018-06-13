@@ -2,6 +2,7 @@
 - finish all in-code TODOs
 - finalize wise-river
 - finalize request-target
+- write wise-trace, and add it as an optional dependency in development mode only
 - update dependencies
 - write tests
 - write readme
