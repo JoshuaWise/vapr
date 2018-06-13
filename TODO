@@ -1,7 +1,7 @@
 - support request and response bodies of various types
 - finish all in-code TODOs
 - finalize wise-river
-- finalize parse-http-url
+- finalize request-target
 - update dependencies
 - write tests
 - write readme
