@@ -42,6 +42,6 @@
   },
   "homepage": "https://github.com/JoshuaWise/wingit#readme",
   "optionalDependencies": {
-    "wise-inspection": "^1.0.1"
+    "wise-inspection": ">=1.0.1"
   }
 }
