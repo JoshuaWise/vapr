@@ -1,4 +1,3 @@
-- provide way of defining universal logger (and maybe even noSuchMethod/notFound/noHost)
 - move plugins to other projects
 - support request and response bodies of various types
 - finish all in-code TODOs
