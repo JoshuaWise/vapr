@@ -1,10 +1,11 @@
+- create top-level "app" interface
 - move plugins to other projects
 - support request and response bodies of various types
 - finish all in-code TODOs
-- write wise-trace, and add it as an optional dependency in development mode only
 - write tests
 - write readme
 - update dependencies (and package-lock)
+- write wise-trace, and add it as an optional dependency in development mode only
 - publish
 
 NOTE:
