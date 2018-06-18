@@ -1,11 +1,10 @@
 - move plugins to other projects
 - support request and response bodies of various types
 - finish all in-code TODOs
-- finalize wise-river
 - write wise-trace, and add it as an optional dependency in development mode only
-- update dependencies
 - write tests
 - write readme
+- update dependencies (and package-lock)
 - publish
 
 NOTE:
