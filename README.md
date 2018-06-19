@@ -17,10 +17,11 @@ npm install --save vapr
 
 ```js
 const app = require('vapr')();
+const server = require('http').createServer(app);
 
 app.get('/', req => [[Buffer.from('hello world')]]);
 
-require('http').createServer(app).listen(3000);
+server.listen(3000);
 ```
 
 # Guide
