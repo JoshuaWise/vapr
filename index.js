@@ -9,4 +9,6 @@ module.exports.MethodRouter = require('./lib/routers/method-router');
 module.exports.Route = require('./lib/route');
 module.exports.Request = require('./lib/state/request');
 module.exports.Response = require('./lib/state/response');
+module.exports.Promise = require('wise-promise');
+module.exports.River = require('wise-river');
 try { require('wise-inspection')(require('wise-promise')); } catch (_) {}
