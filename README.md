@@ -19,7 +19,7 @@ npm install --save vapr
 const app = require('vapr')();
 const server = require('http').createServer(app);
 
-app.get('/', req => [[Buffer.from('hello world')]]);
+app.get('/', req => [['hello world']]);
 
 server.listen(3000);
 ```
