@@ -1,7 +1,7 @@
 {
-  "name": "wingit",
+  "name": "vapr",
   "version": "0.1.0",
-  "description": "An unopinionated web server for people who don't give a shit",
+  "description": "A framework for writing expressive, functional-style apps",
   "main": "index.js",
   "dependencies": {
     "content-type": "^1.0.4",
@@ -18,18 +18,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoshuaWise/wingit.git"
+    "url": "git+https://github.com/JoshuaWise/vapr.git"
   },
   "keywords": [
+    "http",
     "framework",
+    "server",
+    "app",
+    "service",
+    "functional",
     "web",
     "rest",
     "restful",
     "router",
-    "app",
     "api",
-    "server",
-    "http",
     "https",
     "promise",
     "stream",
@@ -38,9 +40,9 @@
   "author": "Joshua Wise <joshuathomaswise@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JoshuaWise/wingit/issues"
+    "url": "https://github.com/JoshuaWise/vapr/issues"
   },
-  "homepage": "https://github.com/JoshuaWise/wingit#readme",
+  "homepage": "https://github.com/JoshuaWise/vapr#readme",
   "optionalDependencies": {
     "wise-inspection": ">=1.0.1"
   }
