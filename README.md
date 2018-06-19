@@ -13,7 +13,7 @@ Vapr requires **node v8.9.0** or higher.
 npm install --save vapr
 ```
 
-## Usage
+## Hello world
 
 ```js
 const app = require('vapr')();
