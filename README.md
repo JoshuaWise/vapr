@@ -3,6 +3,8 @@ A framework for writing expressive, functional-style apps.
 
 ## Installation
 
+`vapr` requires **node v8.9.0** or higher.
+
 ```bash
 npm install --save vapr
 ```
