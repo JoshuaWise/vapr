@@ -30,7 +30,7 @@ server.listen(3000);
 
 In many other frameworks, the `req` object is completely mutable. Patterns emerge where a programmer might change the value of a header or query parameter in order to change the behavior of a middleware/plugin down the line. This type of pattern can cause countless bugs that are very difficult to trace. In a better world, if a plugin wishes to allow "overrides", it can simply expose an option to do so.
 
-With Vapr, the `req` object is *deeply immutable*, so programmers can safely rely on the values within it, knowing with certainty that it was not modified by some other code. This might seem like a minor feature, but it gives you an idea of how seriously Vapr regards dependability.
+With Vapr, the `req` object is *deeply immutable*, so programmers can safely rely on the values within it, knowing with certainty that they were not modified by some other code. This might seem like a minor feature, but it gives you an idea of how seriously Vapr regards dependability.
 
 As a request is processed, it's common to attach new auxiliary information to it (such as an object that was parsed from a header). To facilitate this, the `req.meta` object is available, and is completely mutable. Any user-defined or plugin-defined information can be placed there.
 
