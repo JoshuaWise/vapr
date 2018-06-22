@@ -43,7 +43,7 @@ app.get('/article/:id', (req) => {
 });
 ```
 
-In the example above, making a request to `POST /article/123` would result in a `405 Method Not Allowed` error response. To define multiple methods on the same path, use this pattern:
+In the above example, requesting `POST /article/123` would result in a `405 Method Not Allowed`. To have multiple methods on the same path, use `app.route()`.
 
 ```js
 const resource = app.route('/article/:id');
