@@ -74,7 +74,7 @@ const app = require('vapr')({
 
 In many other frameworks, the `req` object is completely mutable. Patterns emerge where a programmer might change the value of a header or query parameter in order to change the behavior of a middleware/plugin down the line. This type of pattern can cause bugs that are very difficult to trace.
 
-With Vapr, the `req` object is *deeply immutable*, so programmers can safely rely on the values within it, knowing with certainty that they were not modified by some other code. This might seem like a minor feature, but it gives you an idea of how seriously Vapr is on dependability.
+With Vapr, the `req` object is *deeply immutable*, so programmers can safely rely on the values within it, knowing with certainty that they were not modified by some other code.
 
 As a request is processed, it's common to attach new auxiliary information to it (such as an object that was parsed from a header). To facilitate this, the `req.meta` object is available, and is completely mutable. Any user-defined or plugin-defined information can be placed there.
 
