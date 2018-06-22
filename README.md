@@ -254,7 +254,7 @@ app.get('/:filename', (req) => {
 });
 ```
 
-Notice how we didn't need to close the stream, or handle errors. Observables have automatic resource management and error propagation, so we only need to worry about our app logic.
+Notice how we didn't need to close the stream, or handle errors. Observables have automatic resource management and error propagation, so we only need to worry about app logic.
 
 Although only HTTP/1.1 supports "chunked" responses, the above example even works with HTTP/1.0 requests, because Vapr is smart enough to detect the situation and adjust the response accordingly.
 
