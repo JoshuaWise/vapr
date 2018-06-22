@@ -115,7 +115,7 @@ app.get('/', (req) => {
 });
 ```
 
-Normally, the status code is required. However, it's very common to return a body with a 200 status code and no custom message or headers, so there's special shorthand for that case:
+Normally, the status code is required. But when you're only returning a body with a 200 status code, there's a convenient shorthand.
 
 ```js
 app.get('/', (req) => {
