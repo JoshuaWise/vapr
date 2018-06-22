@@ -254,7 +254,9 @@ app.get('/:filename', (req) => {
 });
 ```
 
-This will even work for HTTP/1.0 requests, because Vapr is smart enough to detect the situation and adjust the response semantics accordingly.
+This even works for HTTP/1.0 requests, because Vapr is smart enough to detect the situation and adjust the response accordingly.
+
+Notice how we didn't need to close the stream, or handle errors. Observables have automatic resource management and error propagation, so we only have to worry about our app logic.
 
 ## Expected and unexpected errors
 
