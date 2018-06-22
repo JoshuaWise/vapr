@@ -331,7 +331,7 @@ const parent = require('vapr')({ defaultPort: 8080 });
 If someone makes a request to an unknown host, they'll receive a `502 Bad Gateway`, but you can optionally define a custom handler instead.
 
 ```js
-child.noHost(handler);
+parent.noHost(handler);
 ```
 
 ## Correctness and security
