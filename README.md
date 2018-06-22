@@ -246,6 +246,7 @@ If you're dealing with large response bodies, you can stream them to reduce the 
 const fs = require('fs');
 const { River } = require('vapr');
 
+// This function returns a River
 const streamFile = filename => River.riverify(fs.createReadStream(filename));
 
 app.get('/:filename', (req) => {
