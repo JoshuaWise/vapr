@@ -302,7 +302,7 @@ const app = require('vapr')({ logger: myLoggerFunction });
 
 ## Virtual hosting
 
-Vapr has the ability to route requests based on the hostname provided in the request. Vapr apps accomplish this by spawning "child apps". The parent app will route based on hostname, while the child apps route based on the request url.
+Vapr has the ability to route requests based on the hostname provided in the request. Vapr apps accomplish this by spawning "child apps". The parent app will route based on hostname, while the child apps route based on pathname.
 
 ```js
 const parent = require('vapr')();
