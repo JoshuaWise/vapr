@@ -131,24 +131,24 @@ Middleware (plugins) can be assigned in multiple ways.
 
 ```js
 // Insert it before the main route handler
-app.get('/', plugin(), (req) => { /* route handler */ });
+app.get('/', plugin(), (req) => { ... });
 
 // Insert as many plugins as you want
-app.get('/', plugin1(), plugin2(), (req) => { /* route handler */ });
+app.get('/', plugin1(), plugin2(), (req) => { ... });
 
 // Group common plugins together as an array
 const commonPlugins = [plugin1(), plugin2()];
-app.get('/', commonPlugins, (req) => { /* route handler */ });
+app.get('/', commonPlugins, (req) => { ... });
 
 // Use multiple arrays, and nested arrays
 const moreCommonPlugins = [commonPlugins, plugin3()];
-app.get('/', moreCommonPlugins, otherPlugins, (req) => { /* route handler */ });
+app.get('/', moreCommonPlugins, otherPlugins, (req) => { ... });
 
 // Use the route object itself
 const route = app.get('/');
 route.use(commonPlugins, otherPlugins);
 route.use(specialPlugin());
-route.use((req) => { /* route handler */ });
+route.use((req) => { ... });
 ```
 
 In the last example, it's revealed that there's actually no difference between the main route handler and a middleware plugin. A route will simply execute each of the handlers in order, until a response is returned (or thrown), at which point all future handlers are skipped.
@@ -312,9 +312,9 @@ As seen above, wildcards (`*`) can be used in any subdomain position and/or the 
 Each child app can then be used like a regular router.
 
 ```js
-child1.get('/foo', () => { /* route handler */ });
-child2.get('/foo', () => { /* route handler */ });
-child3.get('/foo', () => { /* route handler */ });
+child1.get('/foo', () => { ... });
+child2.get('/foo', () => { ... });
+child3.get('/foo', () => { ... });
 ```
 
 If no port is specified in the host string, a default port of `80` or `443` is assumed (`443` when using [https](https://nodejs.org/api/https.html)). You can specify a different default port by passing an option to the parent app constructor.
