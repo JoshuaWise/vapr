@@ -182,7 +182,7 @@ route.use((req) => (res) => {
 
 Route handlers behave like a stack. They are called in order until a response is generated. When that happens, control will start flowing in the reverse direction, calling each of the *late handlers* in the opposite order.
 
-Late handlers are capable of mutating the response object, but all properties are guarded by setters/getters, preventing any invalid mutation (such as setting the response code to an object). Additionally, each late handler may return a new response, replacing the existing one for the subsequent late handler.
+Late handlers are capable of mutating the response object, but all properties are guarded by setters/getters, preventing any invalid mutation (such as setting the response code to an object). Additionally, each late handler may return a new response, replacing the existing one for subsequent late handlers.
 
 When all handlers and late handlers are finished, the resulting response is finally sent to the client.
 
