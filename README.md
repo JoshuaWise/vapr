@@ -115,7 +115,7 @@ app.get('/', (req) => {
 });
 ```
 
-Normally, the status code is required. But when you're only returning a body with a 200 status code, there's a convenient shorthand.
+Normally the status code is required. But when you're only returning a body with a 200 status code, there's a convenient shorthand.
 
 ```js
 app.get('/', (req) => {
