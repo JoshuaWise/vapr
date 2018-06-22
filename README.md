@@ -31,8 +31,8 @@ server.listen(3000);
 Routing is easy.
 
 ```js
-app.get('/foo', getHandler);
-app.post('/bar', postHandler);
+app.get('/foo', (req) => { ... });
+app.post('/bar', (req) => { ... });
 ```
 
 Need parameters? Also easy.
