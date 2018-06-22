@@ -226,7 +226,7 @@ route.use(async (req) => {
 });
 ```
 
-This is all possible because Vapr embraces the use of [observables](https://www.youtube.com/watch?v=-vPFP-2Mkl8). More specifically, Vapr uses a very JavaScripty observable pattern called a [River](https://github.com/JoshuaWise/wise-river). Visit [the repo](https://github.com/JoshuaWise/wise-river) to learn about all the amazing things you can do with Rivers. Or, just forget about it and pretend they're [async iterables](https://github.com/tc39/proposal-async-iteration), because they are.
+This is all possible because Vapr embraces the use of [observables](https://www.youtube.com/watch?v=-vPFP-2Mkl8). More specifically, Vapr uses a very JavaScripty observable pattern called a [River](https://github.com/JoshuaWise/wise-river). Visit [the repo](https://github.com/JoshuaWise/wise-river) to learn about all the amazing things you can do with Rivers. Or, just forget about it and pretend they're [async iterables](https://github.com/tc39/proposal-async-iteration), because they are:
 
 ```js
 route.use(async (req) => {
