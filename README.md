@@ -260,7 +260,7 @@ Although only HTTP/1.1 supports "chunked" responses, the above example even work
 
 ## Expected and unexpected errors
 
-If you're aware of a possible error case, you can handle it gracefully with ease:
+If you expect an error, you can handle it gracefully with ease:
 
 ```js
 app.get('/article/:id', (req) => {
