@@ -226,7 +226,7 @@ route.use(async (req) => {
 });
 ```
 
-This is all possible because Vapr embraces the use of [observables](https://www.youtube.com/watch?v=-vPFP-2Mkl8). More specifically, Vapr uses a very JavaScripty observable pattern called a [River](https://github.com/JoshuaWise/wise-river). Visit [the repo](https://github.com/JoshuaWise/wise-river) to learn about all the amazing things you can do with Rivers. Or, just forget about it, and pretend they're [async iterables](https://github.com/tc39/proposal-async-iteration), because they are:
+This is all possible because Vapr embraces the use of [observables](https://www.youtube.com/watch?v=-vPFP-2Mkl8). More specifically, Vapr uses a very JavaScripty observable pattern called a [River](https://github.com/JoshuaWise/wise-river). Visit [the repo](https://github.com/JoshuaWise/wise-river) to learn about all the amazing things you can do with Rivers. Or, just forget about it, and pretend they're [async iterables](https://github.com/tc39/proposal-async-iteration), because they are.
 
 ```js
 route.use(async (req) => {
@@ -260,7 +260,7 @@ Although only HTTP/1.1 supports "chunked" responses, the above example even work
 
 ## Expected and unexpected errors
 
-If you can anticipate an error, you can handle it gracefully with ease:
+If you can anticipate an error, you can handle it gracefully with ease.
 
 ```js
 app.get('/article/:id', (req) => {
@@ -328,7 +328,7 @@ If no port is specified in the host string, a default port of `80` or `443` is a
 const parent = require('vapr')({ defaultPort: 8080 });
 ```
 
-If someone makes a request to an unknown host, they'll receive a `502 Bad Gateway`, but you can optionally define a custom handler instead:
+If someone makes a request to an unknown host, they'll receive a `502 Bad Gateway`, but you can optionally define a custom handler instead.
 
 ```js
 child.noHost(handler);
