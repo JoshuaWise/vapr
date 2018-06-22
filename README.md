@@ -102,7 +102,7 @@ Sometimes you may wish to include a custom message or header. To do this, just r
 
 ```js
 app.get('/', (req) => {
-  if (req.headers.has('x-deprecated-header')) throw [400, 'Bad Header'];
+  if (req.headers.has('x-deprecated-header')) throw [400, 'Deprecated Request'];
   return [204, { 'set-cookie': 'visited=true' }];
 });
 ```
