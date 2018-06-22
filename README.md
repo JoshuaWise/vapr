@@ -28,14 +28,14 @@ server.listen(3000);
 
 ## Routing
 
-Adding a new route is easy:
+Routing is easy.
 
 ```js
 app.get('/foo', getHandler);
 app.post('/bar', postHandler);
 ```
 
-Specifying URL parameters is just as easy:
+Need parameters? Also easy.
 
 ```js
 app.get('/article/:id', (req) => {
