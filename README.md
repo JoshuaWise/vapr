@@ -51,7 +51,7 @@ const resource = app.route('/article/:id');
 resource.get(getHandler);
 resource.post(postHandler);
 
-// Although not common, you can also define a custom *method not allowed* handler
+// Although not common, you can also define a custom 'method not allowed' handler
 resource.noSuchMethod(fn);
 ```
 
