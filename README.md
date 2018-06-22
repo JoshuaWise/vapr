@@ -322,7 +322,7 @@ child2.get('/foo', () => { ... });
 child3.get('/foo', () => { ... });
 ```
 
-If no port is specified in the host string, a default port of `80` ([http](https://nodejs.org/api/http.html)) or `443` ([https](https://nodejs.org/api/https.html)). You can specify a different default port by passing an option to the parent app constructor.
+If no port is specified in the host string, a default port of `80` ([http](https://nodejs.org/api/http.html)) or `443` ([https](https://nodejs.org/api/https.html)) is used. You can specify a different default port by passing an option to the parent app constructor.
 
 ```js
 const parent = require('vapr')({ defaultPort: 8080 });
