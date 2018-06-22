@@ -314,7 +314,7 @@ const child3 = parent.host('*.mywebsite.com:*');
 
 As seen above, wildcards (`*`) can be used in any subdomain position and/or the port position. Wildcards are only used when an exact match is not found for a given request.
 
-Each child app can then be used like a regular router.
+Each child app can be used like a regular router.
 
 ```js
 child1.get('/foo', () => { ... });
