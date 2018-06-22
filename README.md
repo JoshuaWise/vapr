@@ -55,7 +55,7 @@ resource.post(postHandler);
 resource.noSuchMethod(fn);
 ```
 
-If someone requests a non-existent path, they'll receive a `404 Not Found`, but you can optionally define a custom *not found* handler instead:
+If someone requests a non-existent path, they'll receive a `404 Not Found`, but you can optionally define a custom *not found* handler instead.
 
 ```js
 app.notFound(handler);
@@ -172,11 +172,13 @@ route.use((req) => {
 });
 ```
 
-In many cases, this can be simplified:
+In many cases, this can be simplified.
 
+```js
 route.use((req) => (res) => {
   // now we have access to the request and response
 });
+```
 
 Route handlers behave like a stack. They are called in order until a response is generated. When that happens, control will start flowing in the reverse direction, calling each of the *late handlers* in the opposite order.
 
