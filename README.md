@@ -176,7 +176,7 @@ In many cases, this can be simplified.
 
 ```js
 route.use((req) => (res) => {
-  // now we have access to the request and response
+  // now we have access to the request AND the response
 });
 ```
 
