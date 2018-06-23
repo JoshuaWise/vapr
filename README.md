@@ -207,9 +207,7 @@ function jsonPlugin(req, callback) {
     }
     callback(null, result);
   });
-  req.on('error', (err) => {
-    callback(err);
-  });
+  req.on('error', callback);
   req.on('aborted', () => {
     callback(new Error('The request was aborted'));
   });
