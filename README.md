@@ -328,7 +328,7 @@ If no port is specified in the host string, a default port of `80` ([http](https
 const parent = require('vapr')({ defaultPort: 8080 });
 ```
 
-If someone makes a request to an unknown host, they'll receive a `502 Bad Gateway`, but you can optionally define a custom handler instead.
+If someone makes a request to an unknown host, they'll receive a `404 Not Found`, but you can optionally define a custom handler instead.
 
 ```js
 parent.noHost(handler);
