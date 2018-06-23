@@ -161,7 +161,7 @@ route.use(async (req) => {
 });
 ```
 
-Some plugins will need to operate after a response has been generated, but before it's sent to the client. To do this, just return a function. Such a function is called a "late handler" and is guaranteed to be called later on, before the response is sent. It will receive the response object as an argument.
+Some plugins will need to operate after a response has been generated, but before it's sent to the client. To do this, just return a function. Such a function is called a "late handler", and is guaranteed to be called later on, before the response is sent. It will receive the response object as an argument.
 
 ```js
 route.use((req) => {
