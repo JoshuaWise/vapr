@@ -201,7 +201,7 @@ function jsonPlugin(req, callback) {
   req.on('end', () => {
     let result;
     try {
-      result = JSON.parse(Buffer.concat(buffers).toString());
+      result = JSON.parse(Buffer.concat(buffers));
     } catch (err) {
       return callback(err);
     }
