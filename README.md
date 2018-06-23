@@ -203,11 +203,14 @@ function jsonPlugin(req, callback) {
     try {
       result = JSON.parse(Buffer.concat(buffers));
     } catch (err) {
-      return callback(err);
+      callback(err);
+      return;
     }
     callback(null, result);
   });
-  req.on('error', callback);
+  req.on('error', (err) => {
+    callback(err);
+  });
   req.on('aborted', () => {
     callback(new Error('The request was aborted'));
   });
