@@ -1,7 +1,7 @@
 # vapr [![Build Status](https://travis-ci.org/JoshuaWise/vapr.svg?branch=master)](https://travis-ci.org/JoshuaWise/vapr)
 A framework for writing expressive, functional-style apps.
 
-Using concepts such as immutability, cascading flow control, and observables, Vapr makes complex tasks easy while preventing bugs and remaining unopinionated.
+Using concepts such as immutability, backwards flow control, and observables, Vapr makes complex tasks easy while preventing bugs and remaining unopinionated.
 
 Vapr is not a RESTful JSON server, or a template rendering app, or an asset streaming service. Vapr is simply a modern HTTP framework suited for any and all of the above. It comes with powerful high-level features, but leaves application-specific functionality to the middleware/plugins.
 
