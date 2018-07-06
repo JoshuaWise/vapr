@@ -349,7 +349,7 @@ Vapr's router is different from most. Most routers work by linearly scanning a l
 
 ![Graph of router throughput as application size increases](https://github.com/JoshuaWise/koa-vapr-comparison/blob/v1.0.0/images/router-throughput.png)
 
-Vapr is mostly concerned with being high-level—it doesn't try to be fast—and yet it still performs well. The result of a simple "hello world" benchmark is shown below.
+Vapr is mostly concerned with being high-level—it doesn't try to be the fastest—and yet it still performs well. The result of a simple "hello world" benchmark is shown below.
 
 - Machine: MacBook Pro (Mid 2014, 2.8 GHz Intel Core i7, 16 GB 1600 MHz DDR3)
 - Node: v10.6.0
