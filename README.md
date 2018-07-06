@@ -364,4 +364,4 @@ Vapr is mostly concerned with being high-level—it doesn't try to be the fastes
 | hapi             | 17.5.1        | 33930      |
 | express          | 4.16.3        | 31189      |
 
-> Don't take micro-benchmarks too seriously. All of these HTTP frameworks will likely have negligible overhead compared to the work done by a real-world application.
+> Don't take "hello world" benchmarks too seriously. All of these HTTP frameworks will likely have negligible overhead compared to the work done by a real-world application.
