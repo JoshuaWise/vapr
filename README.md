@@ -345,6 +345,23 @@ Another feature of correctness is with regards to the string comparison used by 
 
 ## Efficiency
 
-(radix tree routing)
-(event loop efficiency)
-(benchmark)
+Most routers work by linearly scanning a list of regular expressions until a matched is found. This is very inefficient, and scales poorly as your application gets bigger. Vapr's router works by traversing a [radix tree](https://en.wikipedia.org/wiki/Radix_tree), which is much better.
+
+![Graph of router throughput as application size increases](https://github.com/JoshuaWise/koa-vapr-comparison/blob/v1.0.0/images/router-throughput.png)
+
+Vapr is very high-level (it doesn't try to be fast) and yet it still performs well. The result of a simple "hello world" benchmark is shown below.
+
+- Machine: MacBook Pro (Mid 2014, 2.8 GHz Intel Core i7, 16 GB 1600 MHz DDR3)
+- Node: v10.6.0
+- Benchmark: [fastify/benchmarks](https://github.com/fastify/benchmarks) (all default settings)
+
+|                  | Version       | Requests/s |
+| ---------------- | ------------- | ----------:|
+| http.Server      | 10.6.0        | 62026      |
+| vapr             | 0.5.1         | 45290      |
+| restify          | 7.2.1         | 38499      |
+| koa + koa-router | 2.5.1 + 7.4.0 | 37259      |
+| hapi             | 17.5.1        | 33930      |
+| express          | 4.16.3        | 31189      |
+
+> Don't take micro-benchmarks too seriously. All of these HTTP frameworks will likely have negligible overhead compared to the work done by a real-world application.
