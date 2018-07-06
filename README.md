@@ -345,7 +345,7 @@ Another feature of correctness is with regards to the string comparison used by 
 
 ## Efficiency
 
-Most routers work by linearly scanning a list of regular expressions until a matched is found. This is very inefficient, and scales poorly as your application gets bigger. Vapr's router works by traversing a [radix tree](https://en.wikipedia.org/wiki/Radix_tree), which is much better.
+Vapr's router is different from most. Most routers work by linearly scanning a list of regular expressions until a matched is found. This is very inefficient, and scales poorly as your application gets bigger. Vapr's router works by traversing a [radix tree](https://en.wikipedia.org/wiki/Radix_tree), which is much better.
 
 ![Graph of router throughput as application size increases](https://github.com/JoshuaWise/koa-vapr-comparison/blob/v1.0.0/images/router-throughput.png)
 
