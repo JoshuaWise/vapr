@@ -351,10 +351,6 @@ Vapr's router is different from most. Most routers work by linearly scanning a l
 
 Vapr is mostly concerned with being high-level—it doesn't try to be the fastest. Despite this, it still performs well. Below is the result of a simple "hello world" benchmark.
 
-- Machine: MacBook Pro (Mid 2014, 2.8 GHz Intel Core i7, 16 GB 1600 MHz DDR3)
-- Node: v10.6.0
-- Benchmark: [fastify/benchmarks](https://github.com/fastify/benchmarks) (all default settings)
-
 |                  | Version       | Requests/s |
 | ---------------- | ------------- | ----------:|
 | http.Server      | 10.6.0        | 62026      |
@@ -363,5 +359,9 @@ Vapr is mostly concerned with being high-level—it doesn't try to be the fastes
 | koa + koa-router | 2.5.1 + 7.4.0 | 37259      |
 | hapi             | 17.5.1        | 33930      |
 | express          | 4.16.3        | 31189      |
+
+- Machine: MacBook Pro (Mid 2014, 2.8 GHz Intel Core i7, 16 GB 1600 MHz DDR3)
+- Node: v10.6.0
+- Benchmark: [fastify/benchmarks](https://github.com/fastify/benchmarks) (all default settings)
 
 > Don't take "hello world" benchmarks too seriously. All of these HTTP frameworks will likely have negligible overhead compared to the work done by a real-world application.
