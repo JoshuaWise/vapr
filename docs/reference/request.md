@@ -88,7 +88,7 @@ route.use((req) => {
 
 ### .read() -> *River*
 
-Reads the request body, returning a [River](https://github.com/JoshuaWise/wise-river) (async iterable) that emits chunks of the octet stream. This method can only be used once per request—it will return a rejected River after the first invocation.
+Reads the request body, returning a [River](https://github.com/JoshuaWise/wise-river) (async iterable) that emits chunks of the octet stream. This method can only be invoked once per request—it will return a rejected River after the first invocation.
 
 ```js
 route.use(async (req) => {
