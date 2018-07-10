@@ -84,3 +84,7 @@ route.use((req) => (res) => {
   res.headers.set('Content-Type', 'application/json; charset=utf-8');
 });
 ```
+
+### .error -> *Error*
+
+If a route handler throws an Error object, it will generate an empty response with a `500` status code. In such cases, the original Error object is exposed by this read-only property.
