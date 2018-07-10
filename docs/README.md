@@ -24,6 +24,10 @@ app.get('/', req => [['hello world']]);
 server.listen(3000);
 ```
 
+## Documentation
+
+If you're new to Vapr, start with [the guide](#guide) below. All other information (such as the API reference or examples) can be found within [the docs](./index.md).
+
 # Guide
 
 ## Routing
@@ -323,10 +327,10 @@ child2.get('/foo', () => { ... });
 child3.get('/foo', () => { ... });
 ```
 
-If no port is specified in the host string, a default port of `80` ([http](https://nodejs.org/api/http.html)) or `443` ([https](https://nodejs.org/api/https.html)) is used. You can specify a different default port by passing an option to the parent app constructor.
+If no port is specified in the host string, a default port of `80` is used. You can specify a different default port by passing an option to the parent app constructor.
 
 ```js
-const parent = require('vapr')({ defaultPort: 8080 });
+const parent = require('vapr')({ defaultPort: 443 });
 ```
 
 If someone makes a request to an unknown host, they'll receive a `404 Not Found`, but you can optionally define a custom handler instead.
