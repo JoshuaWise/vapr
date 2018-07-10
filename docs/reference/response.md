@@ -88,3 +88,9 @@ route.use((req) => (res) => {
 ### .error -> *Error*
 
 If a route handler throws an Error object, it will generate an empty response with a `500` status code. In such cases, the original Error object is exposed by this read-only property.
+
+```js
+route.use((req) => (res) => {
+  if (res.error) console.error(res.error);
+});
+```
