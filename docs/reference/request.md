@@ -50,7 +50,7 @@ The [effective URI](https://tools.ietf.org/html/rfc7230#section-5.5) of the requ
 * `pathname`: the requested path, such as `"/foo/bar"` or `"*"`
 * `search`: the query string following the pathname, such as `"?foo=bar"` or `""`
 
-The first three properties (`protocol`, `hostname`, and `port`) are either non-empty strings or `null`, and are mutually dependent. For example, if a request did not contain a `Host` header and did not specify a host in the url, the three properties will be `null`; otherwise they will be non-empty strings, and are always lowercase.
+The first three properties (`protocol`, `hostname`, and `port`) are either non-empty strings or `null`, and are mutually dependent. For example, if a request did not contain a Host header and did not specify a host in the url, the three properties will be `null`; otherwise they will be non-empty strings, and are always lowercase.
 
 The `pathname` is always a non-empty string, and `search` is either a string starting with `?` or an empty string. These two properties may contain percent-encodings, such as `%2F`.
 
