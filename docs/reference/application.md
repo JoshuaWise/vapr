@@ -193,7 +193,7 @@ route.use(async (req) => {
 });
 
 route.use((req) => {
-  const headers = { 'Content-Type': 'application/json; charset=utf-8' };
+  const headers = { 'Content-Type': 'application/json' };
   const body = JSON.serialize(req.meta.article);
   return [200, headers, [body]];
 });
