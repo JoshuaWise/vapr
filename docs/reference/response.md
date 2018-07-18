@@ -81,7 +81,7 @@ Before the response is sent, the response body must be converted to either `null
 ```js
 route.use((req) => (res) => {
   res.body = JSON.stringify(res.body);
-  res.headers.set('Content-Type', 'application/json; charset=utf-8');
+  res.headers.set('Content-Type', 'application/json');
 });
 ```
 
