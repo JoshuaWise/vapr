@@ -1,6 +1,6 @@
 {
   "name": "vapr",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A framework for writing expressive, functional-style apps",
   "main": "lib/index.js",
   "scripts": {
