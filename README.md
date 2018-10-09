@@ -26,7 +26,7 @@ server.listen(3000);
 
 ## Documentation
 
-If you're new to Vapr, start with [the guide](#guide) below. All other information (such as the API reference or examples) can be found within [the docs](./index.md).
+If you're new to Vapr, start with [the guide](#guide) below. All other information (such as the API reference or examples) can be found within [the docs](./docs/index.md).
 
 # Guide
 
