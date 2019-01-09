@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/JoshuaWise/vapr#readme",
   "dependencies": {
-    "request-target": "^1.0.1",
+    "request-target": "^1.0.2",
     "wise-promise": ">=1.1.0",
     "wise-river": ">=1.0.0"
   },
