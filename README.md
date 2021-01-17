@@ -65,13 +65,10 @@ If someone requests a non-existent path, they'll receive a `404 Not Found`, but 
 app.notFound(handler);
 ```
 
-By default, the router is case-insensitive and ignores trailing slashes. Either of these settings can be changed by passing options to the app constructor.
+By default, the router ignores trailing slashes. This setting can be changed by passing an option to the app constructor.
 
 ```js
-const app = require('vapr')({
-  respectCase: true,
-  respectTrailingSlash: true,
-});
+const app = require('vapr')({ respectTrailingSlash: true });
 ```
 
 ## Immutable requests

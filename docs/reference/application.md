@@ -29,10 +29,6 @@ const httpsServer = require('https').createServer(encryption, app);
 
 An options object can be passed to the app constructor. These options are propagated to all child [apps](#class-application), [resources](#class-resource), and [routes](#class-route). Additionally, there are a few options (below) which affect the app object directly.
 
-### options.respectCase = *false*
-
-If `true`, routing will be done in a case-sensitive manner. This only applies to pathnames (e.g., `/foo/bar`); hostnames are always considered case-insensitive, regardless of this option.
-
 ### options.respectTrailingSlash = *false*
 
 If `true`, the app will not ignore trailing slashes while routing. By default, pathnames such as `/foo` and `/foo/` are considered equal.
@@ -45,7 +41,6 @@ When routing based on hostname, this specifies which port to use for routes that
 const vapr = require('vapr');
 
 const app = vapr({
-  respectCase: true,
   respectTrailingSlash: true,
   defaultPort: process.env.NODE_ENV === 'production' ? 443 : 3000,
 });
@@ -61,7 +56,7 @@ Creates a child [app](#class-application) object, which will receive requests th
 const parentApp = require('vapr')();
 
 const articleApp = app.host('articles.my-service.com');
-const videoApp = app.host('videos.my-service.com', { respectCase: true });
+const videoApp = app.host('videos.my-service.com', { respectTrailingSlash: true });
 ```
 
 The `hostname` string can contain wildcards (`*`) in any subdomain position and/or the port position. If no port is specified in the string, the [`defaultPort`](#optionsdefaultport--80) is used.
