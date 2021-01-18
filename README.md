@@ -65,12 +65,6 @@ If someone requests a non-existent path, they'll receive a `404 Not Found`, but 
 app.notFound(handler);
 ```
 
-By default, the router ignores trailing slashes. This setting can be changed by passing an option to the app constructor.
-
-```js
-const app = require('vapr')({ respectTrailingSlash: true });
-```
-
 ## Immutable requests
 
 In many other frameworks, the `req` object is completely mutable. Patterns emerge where a programmer might change the value of a header or query parameter in order to change the behavior of a middleware/plugin down the line. This type of pattern can cause bugs that are very difficult to trace.
@@ -342,7 +336,7 @@ Vapr takes security very seriously. At the time of this writing, no known HTTP f
 
 There are many other issues with existing frameworks similar to the one described above. Other examples include trimming the whitespace at the end of header values (which Node.js does not do by default for some strange reason, even though the HTTP spec demands it), and ensuring that certain response headers which should be mutually exclusive are indeed treated that way. An exhaustive list of these issues would be too long to cover. Suffice it to say that Vapr is a *true* HTTP framework in the sense that it obeys the HTTP specification very strictly.
 
-Another feature of correctness is with regards to the string comparison used by the router. Most frameworks ignore unicode normalization, and treat percent-encoded characters as-is. Without properly normalizing a url before comparison, strange and difficult-to-trace bugs can occur. Vapr performs proper normalization while routing.
+Another feature of correctness is with regards to the string comparison used by the router. Most frameworks treat percent-encoded characters as-is. However, without properly normalizing a url before comparison, strange and difficult-to-trace bugs can occur. Vapr performs proper normalization while routing.
 
 ## Efficiency
 

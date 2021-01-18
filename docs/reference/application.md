@@ -29,9 +29,9 @@ const httpsServer = require('https').createServer(encryption, app);
 
 An options object can be passed to the app constructor. These options are propagated to all child [apps](#class-application), [resources](#class-resource), and [routes](#class-route). Additionally, there are a few options (below) which affect the app object directly.
 
-### options.respectTrailingSlash = *false*
+### options.noTrailingSlashRedirects = *false*
 
-If `true`, the app will not ignore trailing slashes while routing. By default, pathnames such as `/foo` and `/foo/` are considered equal.
+By default, if a request matches a route except in its presence (or lack thereof) of a trailing slash (`/`), then that request will be automatically redirected to the correct route. This also means you cannot register two separate routes that differ only by the presence of a trailing slash. You can disable this functionality by setting this option to `true`.
 
 ### options.defaultPort = *80*
 
@@ -40,10 +40,9 @@ When routing based on hostname, this specifies which port to use for routes that
 ```js
 const vapr = require('vapr');
 
-const app = vapr({
-  respectTrailingSlash: true,
-  defaultPort: process.env.NODE_ENV === 'production' ? 443 : 3000,
-});
+const PORT = process.env.NODE_ENV === 'production' ? 443 : 3000;
+
+const app = vapr({ defaultPort: PORT });
 ```
 
 ## Methods
@@ -56,7 +55,7 @@ Creates a child [app](#class-application) object, which will receive requests th
 const parentApp = require('vapr')();
 
 const articleApp = app.host('articles.my-service.com');
-const videoApp = app.host('videos.my-service.com', { respectTrailingSlash: true });
+const videoApp = app.host('videos.my-service.com', { logger: myCustomLogger });
 ```
 
 The `hostname` string can contain wildcards (`*`) in any subdomain position and/or the port position. If no port is specified in the string, the [`defaultPort`](#optionsdefaultport--80) is used.

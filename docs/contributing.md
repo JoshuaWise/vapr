@@ -16,7 +16,7 @@ Vapr utilizes high-level APIs in every case possible. For example, header fields
 
 ### 3. No overly opinionated features
 
-Vapr doesn't parse query parameters for you because different query specifications exists; Vapr's router provides options for customizing its behavior. Likewise, new features of Vapr should not be opinionated in ways that favor some use-cases over others.
+Vapr doesn't parse query parameters for you because different query specifications exists. Likewise, new features of Vapr should not be opinionated in ways that favor some use-cases over others.
 
 ### 4. Be strict about security and correctness
 
